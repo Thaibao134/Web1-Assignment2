@@ -1,0 +1,82 @@
+#Logo{
+    float:left;
+    width: 80px;
+    height: auto;
+    margin-right: 1em;
+}
+
+#big_header{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#small_header{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#nav_outline{
+    list-style: none;
+    padding: 10px;
+    overflow:hidden;
+    background-color: #373737;
+    
+  }
+  
+.nav_list{
+    float: left;
+    display: block;
+    color: white;
+    padding: 5px;
+}
+
+.nav_list:hover{
+    background-color: #005eaa;
+}
+
+
+h1 {
+    background-color: #005eaa;
+    color:aliceblue;
+    padding: 2.5px;
+    border-bottom: 5mm solid;
+    border-color: rgb(94, 135, 182);
+}
+
+#fig1 {
+    float:right;
+}
+
+#fig1 img {
+    height: 200px;
+}
+
+figcaption{
+    background-color: #005eaa;
+    color:white;
+    text-align: center;
+    padding: 2px;
+}
+
+#footer{
+    list-style: none;
+    background-color: #005eaa;
+    color:aliceblue;
+    padding: 2.5px;
+    border-bottom: 3mm solid;
+    border-color: rgb(94, 135, 182);
+}
+
+#current {
+    color:red;
+}
+
+  p::first-letter{
+    font-size: 2rem;
+    color:#005eaa;
+    font-weight: bold;
+}
+
+body {
+    font-size: larger;
+    }

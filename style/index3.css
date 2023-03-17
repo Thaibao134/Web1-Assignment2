@@ -1,18 +1,52 @@
-#Logo {
-    float: left;
-    width: 80px;
-    height: auto;
-    margin-right: 1em;
+body{
+    background-color: #D3D3D3;
 }
 
-#big_header {
+.container{
+    background-color: beige;
+}
+
+/* Skip Navigation */
+#skipnav{
+    position: absolute;
+    border: black 2px solid;
+    background-color: orange;
+    top: -50px;
+}
+
+#skipnav:focus{
+    top:10px;
+}
+
+a:focus{
+    border: red solid 2px;
+}
+
+
+
+header{
+    background-color: beige;
+    display: grid;
+}
+
+.headcenter{
+    display:flex;
+    justify-content: center;
+}
+
+#big_header{
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
 }
 
-#small_header {
+#small_header{
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
+}
+
+#Logo{
+    width: 80px;
+    height: auto;
 }
 
 #nav_outline {
@@ -31,13 +65,13 @@
 }
 
 .nav_list:hover {
-    background-color: #005eaa;
+    background-color: #003E70;
 }
 
 
 h1 {
-    background-color: #005eaa;
-    color: aliceblue;
+    background-color: #003E70;
+    color: FFFFFF;
     padding: 2.5px;
     border-bottom: 5mm solid;
     border-color: rgb(94, 135, 182);
@@ -56,7 +90,7 @@ h1 {
 }
 
 figcaption {
-    background-color: #005eaa;
+    background-color: #003E70;
     color: white;
     text-align: center;
     padding: 2px;
@@ -64,8 +98,8 @@ figcaption {
 
 #footer {
     list-style: none;
-    background-color: #005eaa;
-    color: aliceblue;
+    background-color: #003E70;
+    color: FFFFFF;
     padding: 2.5px;
     border-bottom: 3mm solid;
     border-color: rgb(94, 135, 182);
@@ -79,7 +113,7 @@ figcaption {
 
 p::first-letter {
     font-size: 2rem;
-    color: #005eaa;
+    color: #003E70;
     font-weight: bold;
 }
 
@@ -93,6 +127,7 @@ body {
     display: grid;
     grid-template-areas:
         "header"
+        "navabar"
         "art-1"
         "art-2"
         "art-3"
@@ -137,6 +172,10 @@ header {
     grid-area: header;
 }
 
+#navabar{
+    grid-area: navabar;
+}
+
 #art-1 {
     grid-area: art-1;
 }
@@ -162,18 +201,19 @@ header {
 }
 
 
-@media only screen and (max-width: 589px) {}
+@media only screen and (min-width: 590px) {}
 
 
-@media only screen and (min-width: 590px) {
+@media only screen and (min-width: 790px) {
     .container {
         grid-template-areas:
             "header header"
+            "navabar navabar"
             "art-1 art-2"
             "art-3 art-4"
             "links links"
             "footer footer";
-        max-width: 790px;
+        width: 790px;
         margin: auto;
         border: 1px solid skyblue;
     }

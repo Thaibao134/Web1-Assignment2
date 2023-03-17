@@ -1,19 +1,28 @@
-
-#container{
-    display: grid;
-    margin: auto;
+body{
+    background-color: #D3D3D3;
 }
 
-/* 
-Header information
-*/
-#Logo{
-    float:left;
-    width: 80px;
-    height: auto;
-    margin-right: 1em;
+
+/* Skip Navigation */
+#skipnav{
+    position: absolute;
+    border: black 2px solid;
+    background-color: orange;
+    top: -50px;
 }
 
+#skipnav:focus{
+    top:10px;
+}
+
+a:focus{
+    border: red solid 2px;
+}
+
+
+
+
+/* Header */
 header{
     background-color: beige;
     display: grid;
@@ -23,8 +32,6 @@ header{
     display:flex;
     justify-content: center;
 }
-
-
 
 #big_header{
     font-size: 30px;
@@ -36,18 +43,15 @@ header{
     font-family: 'Times New Roman', Times, serif;
 }
 
-#skipnav{
-    position: absolute;
-    border: black 2px solid;
-    background-color: orange;
-    top: -50px;
-}
-
-#skipnav:focus{
-    top:1px;
+#Logo{
+    width: 80px;
+    height: auto;
 }
 
 
+
+
+/* Navigation */
 #nav_outline{
     list-style: none;
     padding: 10px;
@@ -64,13 +68,19 @@ header{
 }
 
 .nav_list:hover{
-    background-color: #005eaa;
+    background-color: #003E70;
 }
 
 
+
+
+
+
+
+/* Body Information */
 h1 {
-    background-color: #005eaa;
-    color:aliceblue;
+    background-color: #003E70;
+    color:#FFFFFF;
     padding: 2.5px;
     border-bottom: 5mm solid;
     border-color: rgb(94, 135, 182);
@@ -78,17 +88,25 @@ h1 {
     justify-content: center;
 }
 
+
+
+#plantpic img{
+    height: 25rem;
+}
+
+
 .fig1 img {
-    height: 16rem;
+    height: 10rem;
 }
 
 figcaption{
-    background-color: #005eaa;
+    background-color: #003E70;
     color:white;
     text-align: center;
     padding: 2px;
     margin: auto;
 }
+
 
 h2 {
     color: black;
@@ -97,27 +115,38 @@ h2 {
     justify-content: center;
 }
 
-#speech_bubble{
-    width:150px;
-    height:auto;
-    float:right;
-}
 
-#resume{
-    width:150px;
-    height:auto;
-    float:right; 
-}
+#current {
+    color:red;
+  }
+  
+  p::first-letter{
+      font-size: 2rem;
+      color:#003E70;
+      font-weight: bold;
+  }
+  
+  .backcolor{
+    display:grid;
+      background-color: beige;
+      height: auto;
+      width: auto;
+      align-items: center;
+      border: solid black;
+      padding: 1rem;
+  }
 
+
+
+
+
+
+
+
+/* table information */
 #table-head{
     background-color: rgba(116, 177, 239, 1);
 }
-
-
-#table1{
-    width:auto;
-}
-
 
 tr:nth-child(even) {
     background-color: rgb(91, 137, 201);
@@ -128,49 +157,37 @@ tr:nth-child(odd) {
   }
 
 
+
+
+
+
+
+/* Footer */
 #footer{
     list-style: none;
-    background-color: #005eaa;
-    color:aliceblue;
+    background-color: #003E70;
+    color:#FFFFFF;
     padding: 2.5px;
     border-bottom: 3mm solid;
     border-color: rgb(94, 135, 182);
 }
 
-#current {
-  color:red;
-}
-
-p::first-letter{
-    font-size: 2rem;
-    color:#005eaa;
-    font-weight: bold;
-}
-
-
-body {
-    font-size: larger;
-    }
-
-img { 
-    border: 1; 
-}
-
-.backcolor{
-    margin:2rem;
-    background-color: beige;
-}
 
 
 
-@media screen and (min-width:590px) {
+
+
+@media screen and (min-width:590px){
     #container{
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        /* margin-left: auto;
-        margin-right: auto; */
     }
-    
+
     header{
+        grid-column: span 2;
+    }
+
+    #top{
         grid-column: span 2;
     }
 
@@ -183,20 +200,16 @@ img {
         grid-column: span 2;
     }
 
-
-    /* #top{
-        align-items: center;
-    } */
-
+    #volunteer{
+        grid-column: span 2;
+    }
 }
 
 
-@media screen and (min-width:790px) {
+@media screen and (min-width:790px){
     #container{
-        width: 790px;
+        width:790px;
         margin-left: auto;
         margin-right: auto;
     }
-    
-    
 }

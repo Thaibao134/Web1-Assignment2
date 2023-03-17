@@ -41,16 +41,18 @@ h1 {
     padding: 2.5px;
     border-bottom: 5mm solid;
     border-color: rgb(94, 135, 182);
+
 }
 
 #fig1 {
-    float: right;
-
+    justify-content: center;
+    display: flex
 }
 
 #fig1 img {
     height: 200px;
-    justify-content: flex-start;
+    justify-content: center;
+
 }
 
 figcaption {
@@ -67,6 +69,7 @@ figcaption {
     padding: 2.5px;
     border-bottom: 3mm solid;
     border-color: rgb(94, 135, 182);
+    width: 100%;
 
 }
 
@@ -85,19 +88,19 @@ body {
 }
 
 
-
-
-
-
-body {
+.container {
     margin: 0;
     display: grid;
     grid-template-areas:
-        "header header"
-        "art-1 art-2"
-        "art-3 art-4"
-        "links links";
+        "header"
+        "art-1"
+        "art-2"
+        "art-3"
+        "art-4"
+        "links"
+        "footer";
 }
+
 
 h1 {
     text-align: center;
@@ -154,28 +157,24 @@ header {
     grid-area: links;
 }
 
-
-
-@media only screen and (max-width: 590px) {
-    body {
-        grid-template-areas:
-            "header"
-            "art-1"
-            "art-2"
-            "art-3"
-            "art-4"
-            "links";
-
-    }
+#footer {
+    grid-area: footer;
 }
 
 
-@media only screen and (max-width: 790px) {
-    body {
+@media only screen and (max-width: 589px) {}
+
+
+@media only screen and (min-width: 590px) {
+    .container {
         grid-template-areas:
             "header header"
             "art-1 art-2"
             "art-3 art-4"
-            "links links";
+            "links links"
+            "footer footer";
+        max-width: 790px;
+        margin: auto;
+        border: 1px solid skyblue;
     }
 }

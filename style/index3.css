@@ -1,82 +1,181 @@
-#Logo{
-    float:left;
+#Logo {
+    float: left;
     width: 80px;
     height: auto;
     margin-right: 1em;
 }
 
-#big_header{
+#big_header {
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
 }
 
-#small_header{
+#small_header {
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
 }
 
-#nav_outline{
+#nav_outline {
     list-style: none;
     padding: 10px;
-    overflow:hidden;
+    overflow: hidden;
     background-color: #373737;
-    
-  }
-  
-.nav_list{
+
+}
+
+.nav_list {
     float: left;
     display: block;
     color: white;
     padding: 5px;
 }
 
-.nav_list:hover{
+.nav_list:hover {
     background-color: #005eaa;
 }
 
 
 h1 {
     background-color: #005eaa;
-    color:aliceblue;
+    color: aliceblue;
     padding: 2.5px;
     border-bottom: 5mm solid;
     border-color: rgb(94, 135, 182);
 }
 
 #fig1 {
-    float:right;
+    float: right;
+
 }
 
 #fig1 img {
     height: 200px;
+    justify-content: flex-start;
 }
 
-figcaption{
+figcaption {
     background-color: #005eaa;
-    color:white;
+    color: white;
     text-align: center;
     padding: 2px;
 }
 
-#footer{
+#footer {
     list-style: none;
     background-color: #005eaa;
-    color:aliceblue;
+    color: aliceblue;
     padding: 2.5px;
     border-bottom: 3mm solid;
     border-color: rgb(94, 135, 182);
+
 }
 
 #current {
-    color:red;
+    color: red;
 }
 
-  p::first-letter{
+p::first-letter {
     font-size: 2rem;
-    color:#005eaa;
+    color: #005eaa;
     font-weight: bold;
 }
 
 body {
     font-size: larger;
+}
+
+
+
+
+
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "art-1 art-2"
+        "art-3 art-4"
+        "links links";
+}
+
+h1 {
+    text-align: center;
+    line-height: 100px;
+    margin: 0;
+}
+
+article {
+
+    padding: 10px;
+    margin: 10px;
+
+}
+
+#links {
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+}
+
+#art-1 {
+    grid-area: art-1;
+}
+
+#art-2 {
+    grid-area: art-2;
+}
+
+#art-3 {
+    grid-area: art-3;
+}
+
+#art-4 {
+    grid-area: art-4;
+}
+
+#links {
+    grid-area: links;
+}
+
+
+
+@media only screen and (max-width: 590px) {
+    body {
+        grid-template-areas:
+            "header"
+            "art-1"
+            "art-2"
+            "art-3"
+            "art-4"
+            "links";
+
     }
+}
+
+
+@media only screen and (max-width: 790px) {
+    body {
+        grid-template-areas:
+            "header header"
+            "art-1 art-2"
+            "art-3 art-4"
+            "links links";
+    }
+}

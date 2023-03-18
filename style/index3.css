@@ -22,7 +22,9 @@ a:focus{
     border: red solid 2px;
 }
 
-
+#top{
+    color:white;
+}
 
 header{
     background-color: beige;
